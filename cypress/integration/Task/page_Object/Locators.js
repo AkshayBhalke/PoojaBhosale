@@ -3,9 +3,9 @@
 
 class Locators{
 
-    urlpage=function(page){
+    urlpage=function(location){
         return  cy.visit(
-            `https://qatest.commentsoldrt.com/webstore-${page}?destination=/account`)
+            `https://qatest.commentsoldrt.com/webstore-${location}?destination=/account`)
     }
     get First_name (){
         return cy.get('#customer-first-name')
@@ -38,11 +38,11 @@ class Locators{
 
     get CartValue(){
           //cart value
-          return cy.get('.tw-text-sm.tw-m-0')
+          return cy.get('#cart-button')
     }
 
     get AddToCart(){
-        return cy.get(':nth-child(2) > .info-container > .mobile-container > .add-to-cart > .desktop')
+        return cy.get(':nth-child(3) > .info-container > .mobile-container > .add-to-cart > .desktop')
     }
     get saveBtn(){
         return cy.get('#save-button')
@@ -98,6 +98,8 @@ class Locators{
     get payWithCard(){
         return cy.get('._cta-button')
     }
+
+    
 
 
 }
